@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataBaseAppDemo"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        
+        <DataGrid x:Name="DegreeDataBase" Margin="20" ItemsSource="{Binding }" 
+                  CellEditEnding="DegreeDataBase_CellEditEnding"
+                  SelectionChanged="DegreeDataBase_SelectionChanged"
+                  RowEditEnding="DegreeDataBase_RowEditEnding"
+                  />
         
     </Grid>
 </Window>
